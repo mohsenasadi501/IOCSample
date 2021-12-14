@@ -17,18 +17,9 @@ namespace IOC.Service.Services
             _walletRepository = walletRepository;
         }
 
-        public void DecreaseAmount(double amount)
-        {
-            throw new NotImplementedException();
-        }
-        public double GetBalance()
-        {
-            throw new NotImplementedException();
-        }
-        public void IncreaseAmount(double amount)
-        {
-            throw new NotImplementedException();
-        }
+        public void DecreaseAmount(double amount) => _walletRepository.DecreaseAmount(amount);
+        public double GetBalance() => _walletRepository.GetBalance();
+        public void IncreaseAmount(double amount) => _walletRepository.IncreaseAmount(amount);
         public void SetDependency(IWalletRepository walletRepository)
         {
             _walletRepository = walletRepository;
